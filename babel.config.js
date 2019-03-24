@@ -16,7 +16,7 @@ module.exports = {
     [
       'module-resolver',
       {
-        root: ['./src', './node_modules']
+        root: ['./src', './node_modules', './assets']
       }
     ]
   ]

@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import Image from 'components/overlaid-image';
+import image from 'images/panda-eating.jpg';
+import OverlaidImage from 'components/overlaid-image';
 
 // const styles = () => ({
 //   root: {
@@ -10,17 +10,23 @@ import Image from 'components/overlaid-image';
 // });
 
 const pandaEating = {
-  
-}
+  source: image,
+  width: 3081,
+  height: 3002,
+  meta: {
+    alt: 'panda-eating',
+    photographer: 'Debbie Molle'
+  }
+};
 
-const App = ({ classes }) => (
-  <div className={classes.root}>
-    <Image image={""} />
+const App = () => (
+  <div>
+    <OverlaidImage image={pandaEating} />
   </div>
 );
 
-App.propTypes = {
-  classes: PropTypes.shape({ root: PropTypes.string.isRequired }).isRequired
-};
+// App.propTypes = {
+//   classes: PropTypes.shape({ root: PropTypes.string.isRequired }).isRequired
+// };
 
 export default App;

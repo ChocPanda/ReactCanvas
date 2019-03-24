@@ -20,7 +20,7 @@ const commonConfigurator = () => ({
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules|dist/,
         loader: 'babel-loader'
       },
@@ -31,6 +31,10 @@ const commonConfigurator = () => ({
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
         loader: 'url-loader?limit=100000'
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader']
       }
     ]
   },
@@ -49,6 +53,7 @@ const commonConfigurator = () => ({
   ],
   output: {
     path: path.resolve(`./dist/${mode}`),
+    publicPath: path.resolve(`./public`),
     filename: '[name].js'
   }
 });

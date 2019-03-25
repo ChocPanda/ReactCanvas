@@ -19,11 +19,7 @@ const pandaEating = {
   }
 };
 
-const App = () => (
-  <div>
-    <OverlaidImage image={pandaEating} />
-  </div>
-);
+const App = () => <OverlaidImage image={pandaEating} />;
 
 // App.propTypes = {
 //   classes: PropTypes.shape({ root: PropTypes.string.isRequired }).isRequired

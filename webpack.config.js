@@ -53,7 +53,6 @@ const commonConfigurator = () => ({
   ],
   output: {
     path: path.resolve(`./dist/${mode}`),
-    publicPath: path.resolve(`./public`),
     filename: '[name].js'
   }
 });
